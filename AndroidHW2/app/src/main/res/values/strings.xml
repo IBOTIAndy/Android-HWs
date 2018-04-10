@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HW#2: 顏士綸</string>
+    <string name="sex">Sex</string>
+    <string name="sex_hint" />
+    <string name="age" >Age</string>
+    <string name="age_hint" />
+    <string name="btn_OK">Enter</string>
+    <string name="suggestion">Suggestion：</string>
+    <string name="sug_not_hurry">not hurry</string>
+    <string name="sug_get_married">get marry</string>
+    <string name="sug_find_couple">find couple</string>
+    <string name="sug_edt_sex_error">sex input error!</string>
+    <string name="sex_male">male</string>
+    <string name="sex_female">female</string>
+</resources>
