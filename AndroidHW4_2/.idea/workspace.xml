@@ -37,9 +37,66 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paperscissorsstonegame/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="1736">
+              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <element signature="e#1056#1897#0" expanded="true" />
+                <element signature="e#1332#1351#0" expanded="true" />
+                <element signature="e#1389#1415#0" expanded="true" />
+                <element signature="e#1418#1448#0" expanded="true" />
+                <element signature="e#1557#1579#0" expanded="true" />
+                <element signature="e#1617#1643#0" expanded="true" />
+                <element signature="e#1646#1677#0" expanded="true" />
+                <element signature="e#1748#1767#0" expanded="true" />
+                <element signature="e#1805#1831#0" expanded="true" />
+                <element signature="e#1834#1865#0" expanded="true" />
+                <element signature="e#1896#1897#0" expanded="true" />
+                <element signature="e#1951#2779#0" expanded="true" />
+                <element signature="e#2217#2239#0" expanded="true" />
+                <element signature="e#2277#2303#0" expanded="true" />
+                <element signature="e#2306#2336#0" expanded="true" />
+                <element signature="e#2442#2461#0" expanded="true" />
+                <element signature="e#2499#2525#0" expanded="true" />
+                <element signature="e#2528#2559#0" expanded="true" />
+                <element signature="e#2630#2649#0" expanded="true" />
+                <element signature="e#2687#2713#0" expanded="true" />
+                <element signature="e#2716#2747#0" expanded="true" />
+                <element signature="e#2778#2779#0" expanded="true" />
+                <element signature="e#2833#3660#0" expanded="true" />
+                <element signature="e#3098#3117#0" expanded="true" />
+                <element signature="e#3155#3181#0" expanded="true" />
+                <element signature="e#3184#3214#0" expanded="true" />
+                <element signature="e#3320#3339#0" expanded="true" />
+                <element signature="e#3377#3403#0" expanded="true" />
+                <element signature="e#3406#3437#0" expanded="true" />
+                <element signature="e#3508#3530#0" expanded="true" />
+                <element signature="e#3568#3594#0" expanded="true" />
+                <element signature="e#3597#3628#0" expanded="true" />
+                <element signature="e#3659#3660#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameSystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paperscissorsstonegame/GameSystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+              <folding>
+                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#373#374#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+                <element signature="e#693#694#0" expanded="true" />
+                <element signature="e#730#731#0" expanded="true" />
+                <element signature="e#780#781#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,6 +112,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -1770,6 +1834,8 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/paperscissorsstonegame/GameSystem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/paperscissorsstonegame/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -1830,7 +1896,7 @@
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../androidmid/Android-HW-hw4.2" />
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="2.1.0" />
   </component>
   <component name="RunDashboard">
@@ -2060,11 +2126,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paperscissorsstonegame/GameSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paperscissorsstonegame/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="1736">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#1056#1897#0" expanded="true" />
+            <element signature="e#1332#1351#0" expanded="true" />
+            <element signature="e#1389#1415#0" expanded="true" />
+            <element signature="e#1418#1448#0" expanded="true" />
+            <element signature="e#1557#1579#0" expanded="true" />
+            <element signature="e#1617#1643#0" expanded="true" />
+            <element signature="e#1646#1677#0" expanded="true" />
+            <element signature="e#1748#1767#0" expanded="true" />
+            <element signature="e#1805#1831#0" expanded="true" />
+            <element signature="e#1834#1865#0" expanded="true" />
+            <element signature="e#1896#1897#0" expanded="true" />
+            <element signature="e#1951#2779#0" expanded="true" />
+            <element signature="e#2217#2239#0" expanded="true" />
+            <element signature="e#2277#2303#0" expanded="true" />
+            <element signature="e#2306#2336#0" expanded="true" />
+            <element signature="e#2442#2461#0" expanded="true" />
+            <element signature="e#2499#2525#0" expanded="true" />
+            <element signature="e#2528#2559#0" expanded="true" />
+            <element signature="e#2630#2649#0" expanded="true" />
+            <element signature="e#2687#2713#0" expanded="true" />
+            <element signature="e#2716#2747#0" expanded="true" />
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2833#3660#0" expanded="true" />
+            <element signature="e#3098#3117#0" expanded="true" />
+            <element signature="e#3155#3181#0" expanded="true" />
+            <element signature="e#3184#3214#0" expanded="true" />
+            <element signature="e#3320#3339#0" expanded="true" />
+            <element signature="e#3377#3403#0" expanded="true" />
+            <element signature="e#3406#3437#0" expanded="true" />
+            <element signature="e#3508#3530#0" expanded="true" />
+            <element signature="e#3568#3594#0" expanded="true" />
+            <element signature="e#3597#3628#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

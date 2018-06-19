@@ -27,74 +27,59 @@ public class MainActivity extends AppCompatActivity {
         mBtnPaper.setOnClickListener(btnPaperOnClick);
     }
 
-    private View.OnClickListener btnScissorsOnClick = new View.OnClickListener() {
+    private View.OnClickListener btnScissorsOnClick = new View.OnClickListener() {  //按下剪刀
         public void onClick(View v) {
-            // 決定電腦出拳.
-            int iComPlay = (int)(Math.random()*3 + 1);
-
-            // 1 – 剪刀, 2 – 石頭, 3 – 布.
-            if (iComPlay == 1) {
-                mTxtComPlay.setText(R.string.play_scissors);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_draw));
-            }
-            else if (iComPlay == 2) {
-                mTxtComPlay.setText(R.string.play_stone);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_lose));
-            }
-            else {
+            GameSystem useScissorsPlay = new GameSystem();
+            useScissorsPlay.playPaperScissorsStone(1);
+            if(useScissorsPlay.getResult() == 1) {
                 mTxtComPlay.setText(R.string.play_paper);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_win));
+                mTxtResult.setText(getString(R.string.result) + getString(R.string.player_win));
+            }
+            else if(useScissorsPlay.getResult() == 2) {
+                mTxtComPlay.setText(R.string.play_scissors);
+                mTxtResult.setText(getString(R.string.result) + getString(R.string.player_draw));
+            }
+            else{
+                mTxtComPlay.setText(R.string.play_stone);
+                mTxtResult.setText(getString(R.string.result) + getString(R.string.player_lose));
             }
         }
     };
 
-    private View.OnClickListener btnStoneOnClick = new View.OnClickListener() {
+    private View.OnClickListener btnStoneOnClick = new View.OnClickListener() { //按下石頭
         public void onClick(View v) {
-            // 決定電腦出拳.
-            int iComPlay = (int)(Math.random()*3 + 1);
-
-            // 1 – 剪刀, 2 – 石頭, 3 – 布.
-            if (iComPlay == 1) {
+            GameSystem useStonePlay = new GameSystem();
+            useStonePlay.playPaperScissorsStone(2);
+            if(useStonePlay.getResult() == 1) {
                 mTxtComPlay.setText(R.string.play_scissors);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_win));
+                mTxtResult.setText(getString(R.string.result) + getString(R.string.player_win));
             }
-            else if (iComPlay == 2) {
+            else if(useStonePlay.getResult() == 2) {
                 mTxtComPlay.setText(R.string.play_stone);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_draw));
+                mTxtResult.setText(getString(R.string.result) + getString(R.string.player_draw));
             }
-            else {
+            else{
                 mTxtComPlay.setText(R.string.play_paper);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_lose));
+                mTxtResult.setText(getString(R.string.result) + getString(R.string.player_lose));
             }
         }
     };
 
-    private View.OnClickListener btnPaperOnClick = new View.OnClickListener() {
+    private View.OnClickListener btnPaperOnClick = new View.OnClickListener() { //按下布
         public void onClick(View v) {
-            // 決定電腦出拳.
-            int iComPlay = (int)(Math.random()*3 + 1);
-
-            // 1 – 剪刀, 2 – 石頭, 3 – 布.
-            if (iComPlay == 1) {
-                mTxtComPlay.setText(R.string.play_scissors);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_lose));
-            }
-            else if (iComPlay == 2) {
+            GameSystem usePaperPlay = new GameSystem();
+            usePaperPlay.playPaperScissorsStone(3);
+            if(usePaperPlay.getResult() == 1) {
                 mTxtComPlay.setText(R.string.play_stone);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_win));
+                mTxtResult.setText(getString(R.string.result) + getString(R.string.player_win));
             }
-            else {
+            else if(usePaperPlay.getResult() == 2) {
                 mTxtComPlay.setText(R.string.play_paper);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_draw));
+                mTxtResult.setText(getString(R.string.result) + getString(R.string.player_draw));
+            }
+            else{
+                mTxtComPlay.setText(R.string.play_scissors);
+                mTxtResult.setText(getString(R.string.result) + getString(R.string.player_lose));
             }
         }
     };
