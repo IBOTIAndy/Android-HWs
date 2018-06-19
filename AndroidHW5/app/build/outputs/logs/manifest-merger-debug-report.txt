@@ -1,0 +1,96 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:2:1-20:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\536b8e26eb5b948dba81883e4569503f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\1ab8bb39cb78a19347a2dd3687e41933\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\897d48e8c0c55cc872ebd98615bcdfdb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\c8a015216fe1884c3e1b0d6cb327eef6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\71780db37480f9900bc740421601a13e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\d2424b0cf3d6d9042b96a82b168aa179\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\8fde51dae8a837694f4e43d95a3c8d48\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\287518997e0ec046f0758d922104cc87\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\b645c8983d27c7a68ff8d678e8442779\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d92f6869018bc067f97160ede917698f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\4c08194d008336b8a2c4aed96895e43a\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:2:1-20:12
+	package
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:3:5-44
+		INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:2:1-20:12
+		INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:2:1-20:12
+		INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:5:5-18:19
+	android:supportsRtl
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:9:9-35
+	android:label
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:8:9-41
+	android:icon
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:10:9-40
+activity#com.galleryusingviewanimation.MainActivity
+ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:11:9-17:20
+	android:name
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:11:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:12:13-16:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:13:17-69
+	android:name
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:13:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:15:17-77
+	android:name
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml:15:27-74
+uses-sdk
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\536b8e26eb5b948dba81883e4569503f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\536b8e26eb5b948dba81883e4569503f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\1ab8bb39cb78a19347a2dd3687e41933\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\1ab8bb39cb78a19347a2dd3687e41933\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\897d48e8c0c55cc872ebd98615bcdfdb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\897d48e8c0c55cc872ebd98615bcdfdb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\c8a015216fe1884c3e1b0d6cb327eef6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\c8a015216fe1884c3e1b0d6cb327eef6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\71780db37480f9900bc740421601a13e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\71780db37480f9900bc740421601a13e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\d2424b0cf3d6d9042b96a82b168aa179\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\d2424b0cf3d6d9042b96a82b168aa179\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\8fde51dae8a837694f4e43d95a3c8d48\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\8fde51dae8a837694f4e43d95a3c8d48\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\287518997e0ec046f0758d922104cc87\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\287518997e0ec046f0758d922104cc87\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\b645c8983d27c7a68ff8d678e8442779\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\b645c8983d27c7a68ff8d678e8442779\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d92f6869018bc067f97160ede917698f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d92f6869018bc067f97160ede917698f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\4c08194d008336b8a2c4aed96895e43a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\AndyTony\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\4c08194d008336b8a2c4aed96895e43a\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\AndyTony\Documents\HomeWork\Android\AndroidHW5\app\src\main\AndroidManifest.xml
