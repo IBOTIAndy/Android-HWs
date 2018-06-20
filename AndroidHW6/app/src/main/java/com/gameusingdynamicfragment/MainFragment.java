@@ -1,7 +1,9 @@
 package com.gameusingdynamicfragment;
 
 import android.app.Activity;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -109,29 +111,52 @@ public class MainFragment extends Fragment {
         mBtnHiddenResult.setOnClickListener(btnHiddenResultOnClick);
     }
 
+    private void playThrowingDice(){
+        // Decide computer play.
+        //隨機選一個數字
+        int throwingDice = (int)(Math.random()*6 + 1);
+
+        miCountSet++;   //遊玩次數+1
+//            mEdtCountSet.setText(String.valueOf(miCountSet));
+        //設定抽到的數字
+        mImgBtnDice.setImageDrawable(getResources().getDrawable(diceStatus[throwingDice - 1]));
+        if(throwingDice <= 2){  //1 2 玩家贏
+            mTxtResult.setText(getString(R.string.player_win));
+            miCountPlayerWin++;
+        }
+        else if(throwingDice >= 5) {    //5 6 玩家輸
+            mTxtResult.setText(getString(R.string.player_lose));
+            miCountComWin++;
+        }
+        else{   //3 4 平手
+            mTxtResult.setText(getString(R.string.player_draw));
+            miCountDraw++;
+        }
+        //紀錄分數
+        mCallback.updateGameResult(miCountSet, miCountPlayerWin, miCountComWin, miCountDraw);
+    }
     private View.OnClickListener imgBtnDiceOnClick = new View.OnClickListener() {
         public void onClick(View v) {
-            // Decide computer play.
-            int throwingDice = (int)(Math.random()*6 + 1);
+            // 取得動畫
+            final AnimationDrawable animation = (AnimationDrawable) getResources().getDrawable(R.drawable.anim_roll_dice);
+            // 設定顯示動畫
+            mImgBtnDice.setImageDrawable(animation);
+            // 動畫開始
+            animation.start();
+            // 宣告 Handler
+            Handler handler = new Handler();
+            // 一秒鐘後停止動畫且擲出點數
+            handler.postDelayed(new Runnable() {
+            @Override
+                public void run() {
+                    animation.stop();
+                       playThrowingDice();
+                }
+            }, 1000);
 
-            miCountSet++;   //遊玩次數+1
-//            mEdtCountSet.setText(String.valueOf(miCountSet));
-            mImgBtnDice.setImageDrawable(getResources().getDrawable(diceStatus[throwingDice - 1]));
-            if(throwingDice <= 2){
-                mTxtResult.setText(getString(R.string.player_win));
-                miCountPlayerWin++;
-            }
-            else if(throwingDice >= 5) {
-                mTxtResult.setText(getString(R.string.player_lose));
-                miCountComWin++;
-            }
-            else{
-                mTxtResult.setText(getString(R.string.draw_set));
-                miCountDraw++;
-            }
-
-            mCallback.updateGameResult(miCountSet, miCountPlayerWin, miCountComWin, miCountDraw);
         }
+
+
     };
 
     private View.OnClickListener btnShowResult1OnClick = new View.OnClickListener() {
