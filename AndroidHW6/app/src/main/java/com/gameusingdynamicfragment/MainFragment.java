@@ -4,15 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainFragment extends Fragment {
@@ -32,10 +28,7 @@ public class MainFragment extends Fragment {
 
     private CallbackInterface mCallback;
 
-    private ImageButton mImgBtnScissors,
-                        mImgBtnStone,
-                        mImgBtnPaper;
-    private ImageView mImgViewComPlay;
+    private ImageButton mImgBtnDice;
     private TextView mTxtResult;
 /*
     public EditText mEdtCountSet,
@@ -44,6 +37,11 @@ public class MainFragment extends Fragment {
                     mEdtCountDraw;
 */
 
+    private Integer[] diceStatus = {
+            R.drawable.dice01, R.drawable.dice02,
+            R.drawable.dice03, R.drawable.dice04,
+            R.drawable.dice05, R.drawable.dice06};
+    
     // 新增統計遊戲局數和輸贏的變數
     private int miCountSet = 0,
                 miCountPlayerWin = 0,
@@ -89,10 +87,7 @@ public class MainFragment extends Fragment {
         // 必須先呼叫getView()取得程式畫面物件，然後才能呼叫它的
         // findViewById()取得介面物件
         mTxtResult = (TextView) getView().findViewById(R.id.txtResult);
-        mImgBtnScissors = (ImageButton) getView().findViewById(R.id.imgBtnScissors);
-        mImgBtnStone = (ImageButton) getView().findViewById(R.id.imgBtnStone);
-        mImgBtnPaper = (ImageButton) getView().findViewById(R.id.imgBtnPaper);
-        mImgViewComPlay = (ImageView) getView().findViewById(R.id.imgViewComPlay);
+        mImgBtnDice = (ImageButton) getView().findViewById(R.id.imgBtnDice);
 
         // 以下介面元件是在另一個Fragment中，因此必須呼叫所屬的Activity
         // 才能取得這些介面元件
@@ -103,9 +98,7 @@ public class MainFragment extends Fragment {
         mEdtCountDraw = (EditText) getActivity().findViewById(R.id.edtCountDraw);
 */
 
-        mImgBtnScissors.setOnClickListener(imgBtnScissorsOnClick);
-        mImgBtnStone.setOnClickListener(imgBtnStoneOnClick);
-        mImgBtnPaper.setOnClickListener(imgBtnPaperOnClick);
+        mImgBtnDice.setOnClickListener(imgBtnDiceOnClick);
 
         mBtnShowResult1 = (Button) getView().findViewById(R.id.btnShowResult1);
         mBtnShowResult2 = (Button) getView().findViewById(R.id.btnShowResult2);
@@ -116,110 +109,28 @@ public class MainFragment extends Fragment {
         mBtnHiddenResult.setOnClickListener(btnHiddenResultOnClick);
     }
 
-    private View.OnClickListener imgBtnScissorsOnClick = new View.OnClickListener() {
+    private View.OnClickListener imgBtnDiceOnClick = new View.OnClickListener() {
         public void onClick(View v) {
             // Decide computer play.
-            int iComPlay = (int)(Math.random()*3 + 1);
+            int throwingDice = (int)(Math.random()*6 + 1);
 
-            miCountSet++;
+            miCountSet++;   //遊玩次數+1
 //            mEdtCountSet.setText(String.valueOf(miCountSet));
-
-            // 1 - scissors, 2 - stone, 3 - net.
-            if (iComPlay == 1) {
-                mImgViewComPlay.setImageResource(R.drawable.scissors);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_draw));
-                miCountDraw++;
-//                mEdtCountDraw.setText(String.valueOf(miCountDraw));
-            }
-            else if (iComPlay == 2) {
-                mImgViewComPlay.setImageResource(R.drawable.stone);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_lose));
-                miCountComWin++;
-//                mEdtCountComWin.setText(String.valueOf(miCountComWin));
-            }
-            else {
-                mImgViewComPlay.setImageResource(R.drawable.paper);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_win));
+            mImgBtnDice.setImageDrawable(getResources().getDrawable(diceStatus[throwingDice - 1]));
+            if(throwingDice <= 2){
+                mTxtResult.setText(getString(R.string.player_win));
                 miCountPlayerWin++;
-//                mEdtCountPlayerWin.setText(String.valueOf(miCountPlayerWin));
             }
-
-            mCallback.updateGameResult(miCountSet, miCountPlayerWin,
-                    miCountComWin, miCountDraw);
-        }
-    };
-
-    private View.OnClickListener imgBtnStoneOnClick = new View.OnClickListener() {
-        public void onClick(View v) {
-            int iComPlay = (int)(Math.random()*3 + 1);
-
-            miCountSet++;
-//            mEdtCountSet.setText(String.valueOf(miCountSet));
-
-            // 1 - scissors, 2 - stone, 3 - net.
-            if (iComPlay == 1) {
-                mImgViewComPlay.setImageResource(R.drawable.scissors);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_win));
-                miCountPlayerWin++;
-//                mEdtCountPlayerWin.setText(String.valueOf(miCountPlayerWin));
-            }
-            else if (iComPlay == 2) {
-                mImgViewComPlay.setImageResource(R.drawable.stone);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_draw));
-                miCountDraw++;
-//                mEdtCountDraw.setText(String.valueOf(miCountDraw));
-            }
-            else {
-                mImgViewComPlay.setImageResource(R.drawable.paper);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_lose));
+            else if(throwingDice >= 5) {
+                mTxtResult.setText(getString(R.string.player_lose));
                 miCountComWin++;
-//                mEdtCountComWin.setText(String.valueOf(miCountComWin));
             }
-
-            mCallback.updateGameResult(miCountSet, miCountPlayerWin,
-                    miCountComWin, miCountDraw);
-        }
-    };
-
-    private View.OnClickListener imgBtnPaperOnClick = new View.OnClickListener() {
-        public void onClick(View v) {
-            int iComPlay = (int)(Math.random()*3 + 1);
-
-            miCountSet++;
-//            mEdtCountSet.setText(String.valueOf(miCountSet));
-
-            // 1 - scissors, 2 - stone, 3 - net.
-            if (iComPlay == 1) {
-                mImgViewComPlay.setImageResource(R.drawable.scissors);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_lose));
-                miCountComWin++;
-//                mEdtCountComWin.setText(String.valueOf(miCountComWin));
-            }
-            else if (iComPlay == 2) {
-                mImgViewComPlay.setImageResource(R.drawable.stone);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_win));
-                miCountPlayerWin++;
-//                mEdtCountPlayerWin.setText(String.valueOf(miCountPlayerWin));
-            }
-            else {
-                mImgViewComPlay.setImageResource(R.drawable.paper);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_draw));
+            else{
+                mTxtResult.setText(getString(R.string.draw_set));
                 miCountDraw++;
-//                mEdtCountDraw.setText(String.valueOf(miCountDraw));
             }
 
-            mCallback.updateGameResult(miCountSet, miCountPlayerWin,
-                    miCountComWin, miCountDraw);
-
+            mCallback.updateGameResult(miCountSet, miCountPlayerWin, miCountComWin, miCountDraw);
         }
     };
 

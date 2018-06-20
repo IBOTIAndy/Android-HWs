@@ -37,7 +37,7 @@
     </TableRow>
 
     <TableRow>
-        <TextView android:text="@string/draw"
+        <TextView android:text="@string/draw_set"
             android:textSize="20sp"
             android:textColor="#0FFFFF" />
         <EditText android:id="@+id/edtCountDraw"
