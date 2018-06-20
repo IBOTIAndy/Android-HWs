@@ -11,7 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainFragment extends Fragment {
 
@@ -30,8 +32,9 @@ public class MainFragment extends Fragment {
 
     private CallbackInterface mCallback;
 
-    private ImageButton mImgBtnDice;
-    private TextView mTxtResult;
+    private ImageView mImgDice;
+    private Button mBtnPlayDice;
+    private Button mBtnBack;
 /*
     public EditText mEdtCountSet,
                     mEdtCountPlayerWin,
@@ -51,8 +54,8 @@ public class MainFragment extends Fragment {
                 miCountDraw = 0;
 
     private Button mBtnShowResult1,
-                    mBtnShowResult2,
-                    mBtnHiddenResult;
+                   mBtnShowResult2,
+                   mBtnHiddenResult;
 
     private boolean mbShowResult = false;
 
@@ -88,8 +91,9 @@ public class MainFragment extends Fragment {
 
         // 必須先呼叫getView()取得程式畫面物件，然後才能呼叫它的
         // findViewById()取得介面物件
-        mTxtResult = (TextView) getView().findViewById(R.id.txtResult);
-        mImgBtnDice = (ImageButton) getView().findViewById(R.id.imgBtnDice);
+        mImgDice = (ImageButton) getView().findViewById(R.id.imgDice);
+        mBtnPlayDice = (Button) getView().findViewById(R.id.btnPlayDice);
+        mBtnBack = (Button) getView().findViewById(R.id.btn_Back);
 
         // 以下介面元件是在另一個Fragment中，因此必須呼叫所屬的Activity
         // 才能取得這些介面元件
@@ -100,7 +104,7 @@ public class MainFragment extends Fragment {
         mEdtCountDraw = (EditText) getActivity().findViewById(R.id.edtCountDraw);
 */
 
-        mImgBtnDice.setOnClickListener(imgBtnDiceOnClick);
+        mBtnPlayDice.setOnClickListener(btnPlayDiceOnClick);
 
         mBtnShowResult1 = (Button) getView().findViewById(R.id.btnShowResult1);
         mBtnShowResult2 = (Button) getView().findViewById(R.id.btnShowResult2);
@@ -109,6 +113,8 @@ public class MainFragment extends Fragment {
         mBtnShowResult1.setOnClickListener(btnShowResult1OnClick);
         mBtnShowResult2.setOnClickListener(btnShowResult2OnClick);
         mBtnHiddenResult.setOnClickListener(btnHiddenResultOnClick);
+
+        //mBtnBack.setOnClickListener(btnBackOnClick);
     }
 
     private void playThrowingDice(){
@@ -119,28 +125,31 @@ public class MainFragment extends Fragment {
         miCountSet++;   //遊玩次數+1
 //            mEdtCountSet.setText(String.valueOf(miCountSet));
         //設定抽到的數字
-        mImgBtnDice.setImageDrawable(getResources().getDrawable(diceStatus[throwingDice - 1]));
+        mImgDice.setImageDrawable(getResources().getDrawable(diceStatus[throwingDice - 1]));
         if(throwingDice <= 2){  //1 2 玩家贏
-            mTxtResult.setText(getString(R.string.player_win));
+            String result = getString(R.string.player_win);                        //取出結果字串
+            Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();   //使用懸浮式顯示(Toast)印出結果
             miCountPlayerWin++;
         }
         else if(throwingDice >= 5) {    //5 6 玩家輸
-            mTxtResult.setText(getString(R.string.player_lose));
+            String result = getString(R.string.player_lose);                        //取出結果字串
+            Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();   //使用懸浮式顯示(Toast)印出結果
             miCountComWin++;
         }
         else{   //3 4 平手
-            mTxtResult.setText(getString(R.string.player_draw));
+            String result = getString(R.string.player_draw);                        //取出結果字串
+            Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();   //使用懸浮式顯示(Toast)印出結果
             miCountDraw++;
         }
         //紀錄分數
         mCallback.updateGameResult(miCountSet, miCountPlayerWin, miCountComWin, miCountDraw);
     }
-    private View.OnClickListener imgBtnDiceOnClick = new View.OnClickListener() {
+    private View.OnClickListener btnPlayDiceOnClick = new View.OnClickListener() {
         public void onClick(View v) {
             // 取得動畫
             final AnimationDrawable animation = (AnimationDrawable) getResources().getDrawable(R.drawable.anim_roll_dice);
             // 設定顯示動畫
-            mImgBtnDice.setImageDrawable(animation);
+            mImgDice.setImageDrawable(animation);
             // 動畫開始
             animation.start();
             // 宣告 Handler
@@ -158,6 +167,7 @@ public class MainFragment extends Fragment {
 
 
     };
+
 
     private View.OnClickListener btnShowResult1OnClick = new View.OnClickListener() {
         public void onClick(View v) {
