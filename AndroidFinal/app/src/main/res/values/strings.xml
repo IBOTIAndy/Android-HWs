@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidFinal</string>
+    <string name="btn_main_start">開始遊戲</string>
+    <string name="btn_main_exit">離開</string>
+
+    <string name="btn_game_back">返回</string>
+</resources>
